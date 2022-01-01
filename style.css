@@ -2,8 +2,32 @@ body {
   padding: 100px;
 }
 .submit-area {
-  margin: 50px 100px;
   padding: 50px;
+  margin: 50px 0;
   border-radius: 10px;
   box-shadow: 5px 5px 10px lightgrey;
+}
+.submit-transaction {
+  padding: 50px;
+  margin: 40px 0;
+  border-radius: 10px;
+  box-shadow: 5px 5px 8px lightgrey;
+}
+
+#transaction-area {
+  display: none;
+}
+.status {
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+.deposit {
+  background-color: slateblue;
+}
+.withdraw {
+  background-color: lightsalmon;
+}
+.balance {
+  background-color: orange;
 }
