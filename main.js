@@ -17,17 +17,17 @@ depositBtn.addEventListener("click", () => {
   const depositText = depositAmount.value;
   const depositNum = parseFloat(depositText);
 
-  const currentDepositText = currentDeposit.innerText;
-  const currentDepositNum = parseFloat(currentDepositText);
-  const totalDeposit = depositNum + currentDepositNum;
+  updateSpanText(currentDeposit, depositNum);
 
-  currentDeposit.innerText = totalDeposit;
-
-  const currentBalanceText = currentBalance.innerText;
-  const currentBalanceNum = parseFloat(currentBalanceText);
-
-  const totalBalance = depositNum + currentBalanceNum;
-  currentBalance.innerText = totalBalance;
+  updateSpanText(currentBalance, depositNum);
 
   depositAmount.value = "";
 });
+
+// function
+function updateSpanText(id, depositNum) {
+  const current = id.innerText;
+  const currentNum = parseFloat(current);
+  const total = depositNum + currentNum;
+  id.innerText = total;
+}
