@@ -7,6 +7,7 @@ const currentDeposit = document.getElementById("currentDeposit");
 const currentBalance = document.getElementById("currentBalance");
 const withdrawBtn = document.getElementById("addWithdraw");
 const withdrawAmount = document.getElementById("withdrawAmount");
+const currentWithdraw = document.getElementById("currentWithdraw");
 
 // login front page
 loginBtn.addEventListener("click", () => {
@@ -28,7 +29,9 @@ depositBtn.addEventListener("click", () => {
 // withdraw button event handler
 withdrawBtn.addEventListener("click", () => {
   const withdrawNum = getInputNum(withdrawAmount);
-  console.log(withdrawNum);
+  updateSpanText(currentWithdraw, withdrawNum);
+  updateSpanText(currentBalance, -1 * withdrawNum);
+  withdrawAmount.value = "";
 });
 
 // function
